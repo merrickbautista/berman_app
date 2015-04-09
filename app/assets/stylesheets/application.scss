@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 body {
-	padding-top: 70px;
+	padding-top: 50px;
 }
 
 .navbar-nav {
@@ -39,8 +39,21 @@ body {
 }
 
 .absolute-container {
-	border:5px solid red;
 	position:relative;
 	text-align: center;
 	margin-bottom: 50px;
+}
+
+.description {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 50px;
+	margin-top: -40px;
+}
+
+.jumbotron {
+	margin: 10px;
+	border-radius: 25px;
+	text-align: center;
+	padding: 20px;
 }
