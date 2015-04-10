@@ -57,3 +57,47 @@ body {
 	text-align: center;
 	padding: 20px;
 }
+
+
+
+
+
+//Probably needs to be moved to another controller
+
+.date-block {
+	position: relative;
+	height: 150px;
+	width: 150px;
+	margin: auto;
+	border: solid #C5C7C7 3px;
+	text-align: center;
+	//line-height: 150px; //Needs to be same as height: 
+	background-color: #C5C7C7; //light-grey
+	&:hover {
+		border: solid black 3px;
+	}
+}
+
+.date-button {
+	position:absolute;
+	bottom:5%;
+	margin-left: auto;
+	margin-right: auto;
+	left:0;
+	right:0;
+}
+
+#calendar {
+}
+
+td {
+	text-align: center;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+th {
+	text-align: center;
+}
+

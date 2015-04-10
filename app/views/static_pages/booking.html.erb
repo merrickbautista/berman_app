@@ -1,2 +1,80 @@
-<h1>StaticPages#booking</h1>
-<p>Find me in app/views/static_pages/booking.html.erb</p>
+<h1 style="text-align:center;">BOOK NOW!</h1>
+  <% #Initialize the proper date and week, can be simpler using step %>
+  <% @sunday = @date.day - @date.wday %>
+  <% @saturday = @sunday + 6 %>
+  <% @beginning_month = @date.month %>
+  <% @ending_month = @date.month %>
+  <% @beginning_year = @date.year %>
+  <% @ending_year = @date.year %>
+  <% if @sunday < 1 %>
+  	<% @beginning_month = @date.month-1%>
+  	<% if @beginning_month < 1 %>
+  		<% @beginning_year-=1 %>
+  		<% @beginning_month = 12 %>
+  	<% end %>
+  	<% @sunday+=Time.days_in_month(@beginning_month,@date.year) %>
+  <% end %>
+  <% if @saturday > Time.days_in_month(@date.month,@date.year) %>
+  	<% @ending_month = @date.month+1%>
+  	<% if @ending_month > 12 %>
+  		<% @ending_year+=1 %>
+  		<% @ending_month = 1 %>
+  	<% end %>
+  	<% @saturday-=Time.days_in_month(@date.month,@date.year) %>
+  <% end %>
+  <% @beginning_of_week = Date.civil(@beginning_year, @beginning_month, @sunday) %>
+  <% @end_of_week = Date.civil(@ending_year, @ending_month, @saturday) %>
+
+<% #Set up table %>
+<% srand(1234) %>
+<table id='calendar' align="center">
+	<tr>
+		<% (@beginning_of_week..@end_of_week).each do |d| %>
+			<th><%= d.strftime('%A') %></th>
+		<% end %>
+  	</tr>
+  	<tr>
+  		<% (@beginning_of_week..@end_of_week).each do |d| %>
+			<th><%= d.strftime('%B %e, %Y') %></th>
+		<% end %>
+	</tr>
+	<tr>
+		<% (10..18).each do |i| %>
+			<tr>
+			  	<% 7.times do %>
+			    	<td> 
+			    		<div class="date-block">
+			    			<p>
+			    				<div>
+			    					<p style="font-size:12px; margin-bottom:-3px;"> 
+			    						<% if i > 12 %>
+			    							<%= i-12 %>:00 PM
+			    						<% else %>
+			    							<%= i %>:00 AM
+			    						<% end %>
+			    					</p>
+			    					<p>
+			    						<b>Michael Berman</b>
+			    					</p>
+			    					<p style="font-size:13px; margin-top:-8px;">
+			    						<% @choice = rand(2) %>
+			    						<% if @choice < 1 %>
+			    							DreamWave
+			    						<% else %>
+			    							Sensory Deprivation Chamber
+			    						<% end %>
+			    					</p>
+			    				</div>
+			    				<div class="date-button">
+				    				<button type="button" class="btn btn-primary">
+										Reserve
+									</button>
+								</div>
+			    			</p>
+			    		</div>
+			    	</td>
+			  	<% end %>
+		  	</tr>
+		<% end %>
+	</tr>
+</table>

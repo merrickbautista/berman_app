@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'static_pages#home'
 
-  get 'static_pages/booking'
+  get 'booking', to: 'static_pages#booking'
 
   get 'static_pages/sign_up'
 

@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def booking
+  	@date = Date.today
   end
 
   def sign_up
