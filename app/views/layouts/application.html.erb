@@ -10,14 +10,14 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><strong>BLOOM</strong></a>
+      <a class="navbar-brand" href=<%= root_path %>><strong>BLOOM</strong></a>
     </div>
     <ul class="nav navbar-nav">
       <li><%= link_to 'HOME', '/' %></li>
-      <li><%= link_to 'ABOUT US', '#' %></li>
-      <li><%= link_to 'PACKAGES & PRICING', '#' %></li>
+      <li><%= link_to 'ABOUT US', about_path %></li>
+      <li><%= link_to 'PACKAGES & PRICING', pricing_path %></li>
       <li><%= link_to 'BOOKING', booking_path %></li>
-      <li><%= link_to 'CONTACT', '#' %></li>
+      <li><%= link_to 'CONTACT', contact_path %></li>
     </ul>
   </div>
 </div>
