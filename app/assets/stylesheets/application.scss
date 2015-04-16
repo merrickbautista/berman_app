@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'font-icons';
 
 body {
 	padding-top: 50px;
@@ -56,6 +57,13 @@ body {
 	border-radius: 25px;
 	text-align: center;
 	padding: 20px;
+}
+
+.social_button {
+	@include button-variant(grey, black, white);
+    &:hover {
+    	@include button-variant(white,black,white);
+    }
 }
 
 

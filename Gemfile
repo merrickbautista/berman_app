@@ -18,6 +18,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'sprockets-rails', '>= 2.1.4'
 
+#Icon gem
+gem 'font-icons-rails', :git=> 'git://github.com/shorelabs/font-icons-rails.git'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
