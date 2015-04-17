@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'about', to: 'static_pages#about'
   get 'contact', to: 'static_pages#contact'
   get 'pricing', to: 'static_pages#pricing'
+  get 'benefits', to: 'static_pages#benefits'
+  get 'gallery', to: 'static_pages#gallery'
 
   get 'static_pages/sign_up'
 
