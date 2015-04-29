@@ -77,10 +77,9 @@ body {
 	height: 150px;
 	width: 150px;
 	margin: auto;
-	border: solid #C5C7C7 3px;
+	border: solid #C5C7C7 2px;
 	text-align: center;
-	//line-height: 150px; //Needs to be same as height: 
-	background-color: #C5C7C7; //light-grey
+	background-color: #FFFFFF; //light-grey
 	&:hover {
 		border: solid black 3px;
 	}
