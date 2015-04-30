@@ -94,6 +94,14 @@ body {
 	right:0;
 }
 
+.date-block .date-button {
+	display: none;
+}
+
+.date-block:hover .date-button {
+	display: inline;
+}
+
 #calendar {
 }
 
