@@ -12046,59 +12046,62 @@ body {
 }
 
 /* line 62, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
-.social_button {
+.social-button {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
   color: grey;
   background-color: black;
   border-color: white;
 }
 /* line 11, /Users/merrickbautista/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.social_button:hover, .social_button:focus, .social_button.focus, .social_button:active, .social_button.active, .open > .social_button.dropdown-toggle {
+.social-button:hover, .social-button:focus, .social-button.focus, .social-button:active, .social-button.active, .open > .social-button.dropdown-toggle {
   color: grey;
   background-color: black;
   border-color: #e0e0e0;
 }
 /* line 21, /Users/merrickbautista/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.social_button:active, .social_button.active, .open > .social_button.dropdown-toggle {
+.social-button:active, .social-button.active, .open > .social-button.dropdown-toggle {
   background-image: none;
 }
 /* line 29, /Users/merrickbautista/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.social_button.disabled, .social_button.disabled:hover, .social_button.disabled:focus, .social_button.disabled.focus, .social_button.disabled:active, .social_button.disabled.active, .social_button[disabled], .social_button[disabled]:hover, .social_button[disabled]:focus, .social_button[disabled].focus, .social_button[disabled]:active, .social_button[disabled].active, fieldset[disabled] .social_button, fieldset[disabled] .social_button:hover, fieldset[disabled] .social_button:focus, fieldset[disabled] .social_button.focus, fieldset[disabled] .social_button:active, fieldset[disabled] .social_button.active {
+.social-button.disabled, .social-button.disabled:hover, .social-button.disabled:focus, .social-button.disabled.focus, .social-button.disabled:active, .social-button.disabled.active, .social-button[disabled], .social-button[disabled]:hover, .social-button[disabled]:focus, .social-button[disabled].focus, .social-button[disabled]:active, .social-button[disabled].active, fieldset[disabled] .social-button, fieldset[disabled] .social-button:hover, fieldset[disabled] .social-button:focus, fieldset[disabled] .social-button.focus, fieldset[disabled] .social-button:active, fieldset[disabled] .social-button.active {
   background-color: black;
   border-color: white;
 }
 /* line 40, /Users/merrickbautista/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.social_button .badge {
+.social-button .badge {
   color: black;
   background-color: grey;
 }
-/* line 64, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
-.social_button:hover {
+/* line 67, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
+.social-button:hover {
   color: white;
-  background-color: black;
+  background-color: grey;
   border-color: white;
 }
 /* line 11, /Users/merrickbautista/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.social_button:hover:hover, .social_button:hover:focus, .social_button:hover.focus, .social_button:hover:active, .social_button:hover.active, .open > .social_button:hover.dropdown-toggle {
+.social-button:hover:hover, .social-button:hover:focus, .social-button:hover.focus, .social-button:hover:active, .social-button:hover.active, .open > .social-button:hover.dropdown-toggle {
   color: white;
-  background-color: black;
+  background-color: #676767;
   border-color: #e0e0e0;
 }
 /* line 21, /Users/merrickbautista/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.social_button:hover:active, .social_button:hover.active, .open > .social_button:hover.dropdown-toggle {
+.social-button:hover:active, .social-button:hover.active, .open > .social-button:hover.dropdown-toggle {
   background-image: none;
 }
 /* line 29, /Users/merrickbautista/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.social_button:hover.disabled, .social_button:hover.disabled:hover, .social_button:hover.disabled:focus, .social_button:hover.disabled.focus, .social_button:hover.disabled:active, .social_button:hover.disabled.active, .social_button:hover[disabled], .social_button:hover[disabled]:hover, .social_button:hover[disabled]:focus, .social_button:hover[disabled].focus, .social_button:hover[disabled]:active, .social_button:hover[disabled].active, fieldset[disabled] .social_button:hover, fieldset[disabled] .social_button:hover:hover, fieldset[disabled] .social_button:hover:focus, fieldset[disabled] .social_button:hover.focus, fieldset[disabled] .social_button:hover:active, fieldset[disabled] .social_button:hover.active {
-  background-color: black;
+.social-button:hover.disabled, .social-button:hover.disabled:hover, .social-button:hover.disabled:focus, .social-button:hover.disabled.focus, .social-button:hover.disabled:active, .social-button:hover.disabled.active, .social-button:hover[disabled], .social-button:hover[disabled]:hover, .social-button:hover[disabled]:focus, .social-button:hover[disabled].focus, .social-button:hover[disabled]:active, .social-button:hover[disabled].active, fieldset[disabled] .social-button:hover, fieldset[disabled] .social-button:hover:hover, fieldset[disabled] .social-button:hover:focus, fieldset[disabled] .social-button:hover.focus, fieldset[disabled] .social-button:hover:active, fieldset[disabled] .social-button:hover.active {
+  background-color: grey;
   border-color: white;
 }
 /* line 40, /Users/merrickbautista/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.social_button:hover .badge {
-  color: black;
+.social-button:hover .badge {
+  color: grey;
   background-color: white;
 }
 
-/* line 75, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
+/* line 78, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
 .date-block {
   position: relative;
   height: 150px;
@@ -12108,12 +12111,12 @@ body {
   text-align: center;
   background-color: #FFFFFF;
 }
-/* line 83, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
+/* line 86, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
 .date-block:hover {
   border: solid black 3px;
 }
 
-/* line 88, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
+/* line 91, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
 .date-button {
   position: absolute;
   bottom: 5%;
@@ -12123,17 +12126,17 @@ body {
   right: 0;
 }
 
-/* line 97, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
+/* line 100, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
 .date-block .date-button {
   display: none;
 }
 
-/* line 101, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
+/* line 104, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
 .date-block:hover .date-button {
   display: inline;
 }
 
-/* line 108, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
+/* line 111, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
 td {
   text-align: center;
   padding-top: 1px;
@@ -12142,7 +12145,7 @@ td {
   padding-left: 10px;
 }
 
-/* line 115, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
+/* line 118, /Users/merrickbautista/Code/rails_projects/berman_app/app/assets/stylesheets/application.scss */
 th {
   text-align: center;
 }

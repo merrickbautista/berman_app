@@ -59,10 +59,13 @@ body {
 	padding: 20px;
 }
 
-.social_button {
+.social-button {
+	height: 50px;
+	width: 50px;
+	margin: 10px;
 	@include button-variant(grey, black, white);
     &:hover {
-    	@include button-variant(white,black,white);
+    	@include button-variant(white,grey,white);
     }
 }
 
