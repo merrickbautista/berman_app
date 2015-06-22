@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
 @import 'font-icons';
 
 body {
@@ -67,6 +68,11 @@ body {
     &:hover {
     	@include button-variant(white,grey,white);
     }
+}
+
+.col-centered {
+	float: none;
+	margin: 0 auto;
 }
 
 

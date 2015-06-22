@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   root to: 'static_pages#home'
 
   get 'booking', to: 'static_pages#booking'
@@ -9,6 +10,10 @@ Rails.application.routes.draw do
   get 'gallery', to: 'static_pages#gallery'
 
   get 'static_pages/sign_up'
+ # get 'appointments/new'
+  get 'new_appointment', to: 'appointments#new'
+  devise_for :users, :controllers => { registrations: 'registrations' }
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

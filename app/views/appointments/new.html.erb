@@ -1,0 +1,61 @@
+<h1 style="text-align:center">Make An Appointment</h1>
+<div class="row">
+	<form class="col-md-4 col-centered">
+	  <div class="form-group">
+	    <label for="first_name">First Name</label>
+	    <input type="string" class="form-control" id="first_name" placeholder=<%=current_user.first_name%>>
+	  </div>
+	  <div class="form-group">
+	    <label for="last_name">Last Name</label>
+	    <input type="string" class="form-control" id="last_name" placeholder=<%=current_user.last_name%>>
+	  </div>
+	  <div class="form-group">
+	    <label for="email">Email</label>
+	    <input type="email" class="form-control" id="eemail" placeholder=	  <%= current_user.email %>>
+	  </div>
+	  <div class="radio">
+		  <label>
+		    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+		    Float 1
+		  </label>
+		</div>
+		<div class="radio">
+		  <label>
+		    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+		    Float 2
+		  </label>
+		</div>
+		<div class="radio">
+		  <label>
+		    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+		    Chair
+		  </label>
+		</div>
+		<div class="radio">
+		  <label>
+		    <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+		    Yoga
+		  </label>
+		</div>
+		<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </div>
+</div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>

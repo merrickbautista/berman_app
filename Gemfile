@@ -17,10 +17,14 @@ gem 'coffee-rails', '~> 4.1.0'
 #Bootstrap gems
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'sprockets-rails', '>= 2.1.4'
+gem 'momentjs-rails', '>= 2.8.1'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.7.14'
 
 #Icon gem
 gem 'font-icons-rails', :git=> 'git://github.com/shorelabs/font-icons-rails.git'
 
+#User login gem
+gem 'devise'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

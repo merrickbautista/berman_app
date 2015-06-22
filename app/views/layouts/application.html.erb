@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 <div class="navbar navbar-fixed-top navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -22,6 +23,11 @@
       <li><%= link_to 'CONTACT', contact_path %></li>
     </ul>
   </div>
+</div>
+
+<div style="text-align:center">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 </div>
 
 <%= yield %>
