@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'static_pages/sign_up'
  # get 'appointments/new'
   get 'new_appointment', to: 'appointments#new'
+  get 'pre_new_appointment', to: 'appointments#pre_new'
   devise_for :users, :controllers => { registrations: 'registrations' }
 
 
