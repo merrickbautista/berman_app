@@ -1,58 +1,28 @@
-<h1 style="text-align:center">Make An Appointment</h1>
+<% if @hour.to_i > 12 %>
+	<% @adjusted_hour = @hour.to_i - 12 %>
+<% else %>
+	<% @adjusted_hour = @hour %>
+<% end %>
+<h1 style="text-align:center">Scheduling an appointment for:</h1>
+<h2 style="text-align:center"><%=@cday%> <%=@adjusted_hour%>:00 <%=(@hour.to_i > 12) ? 'PM' : 'AM' %> </h2>
 <div class="row">
 	<form class="col-md-4 col-centered">
 	  <div class="form-group">
 	    <label for="first_name">First Name</label>
-	    <input type="string" class="form-control" id="first_name" placeholder=<%=current_user.first_name%>>
+	    <input type="string" class="form-control" id="first_name" value=<%=current_user.first_name%>>
 	  </div>
 	  <div class="form-group">
 	    <label for="last_name">Last Name</label>
-	    <input type="string" class="form-control" id="last_name" placeholder=<%=current_user.last_name%>>
+	    <input type="string" class="form-control" id="last_name" value=<%=current_user.last_name%>>
 	  </div>
 	  <div class="form-group">
 	    <label for="email">Email</label>
-	    <input type="email" class="form-control" id="eemail" placeholder=	  <%= current_user.email %>>
+	    <input type="email" class="form-control" id="eemail" value=<%= current_user.email %>>
 	  </div>
-	  <div class="radio">
-		  <label>
-		    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-		    Float 1
-		  </label>
-		</div>
-		<div class="radio">
-		  <label>
-		    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-		    Float 2
-		  </label>
-		</div>
-		<div class="radio">
-		  <label>
-		    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-		    Chair
-		  </label>
-		</div>
-		<div class="radio">
-		  <label>
-		    <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
-		    Yoga
-		  </label>
-		</div>
-    <div class="form-group">
-        <div class='input-group date' id='datetimepicker1'>
-            <input type='text' class="form-control" placeholder=<%=@hour%>>
-            <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
-            </span>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker( {
-                	format: 'MMMM DD, YYYY hh:00 A',
-                	sideBySide: true
-                });
-            });
-        </script>
-    </div>
-	  <button type="submit" class="btn btn-default">Submit</button>
+
+	  <button type="submit" class="btn btn-default submit">Reserve Your Spot!</button>
+	  <script>
+	  	
+	  </script>
 	</form>
 </div>

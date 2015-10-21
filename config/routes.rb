@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'gallery', to: 'static_pages#gallery'
 
   get 'static_pages/sign_up'
+
+  resources :appointments
  # get 'appointments/new'
   get 'new_appointment', to: 'appointments#new'
   get 'pre_new_appointment', to: 'appointments#pre_new'

@@ -4,16 +4,28 @@
 @import 'font-icons';
 
 body {
-	padding-top: 50px;
+	margin-top: -11px;
+}
+
+.container-fluid {
+	padding: 0;
+	margin: 0;
+}
+
+.logo {
+	margin-top: -24px;
+}
+
+.navbar {
+	background-color: #4FC4F1;
 }
 
 .navbar-nav {
 	padding-left: 50px;
+	background-color: #4FC4F1;
 }
 
-.navbar-brand {
-	font-size: 20px;
-}
+
 
 .mural {
 	width: 100%;

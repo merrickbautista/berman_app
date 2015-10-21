@@ -26,14 +26,13 @@
   <% @end_of_week = Date.civil(@ending_year, @ending_month, @saturday) %>
 
 <ul class="nav nav-pills" style="text-align:right; float:right; padding-right: 160px; margin-top: 20px;">
-  <li role="presentation"><a href="#">Float 1</a></li>
-  <li role="presentation"><a href="#">Float 2</a></li>
-  <li role="presentation"><a href="#">Chair</a></li>
-  <li role="presentation"><a href="#">Yoga</a></li>
+  <li role="presentation" class= "<%= 'active' if current_page?(booking_path(option: "float1")) %>" ><%= link_to 'Float 1', booking_path(option: 'float1') %></li>
+  <li role="presentation" class= "<%= 'active' if current_page?(booking_path(option: "float2")) %>" ><%= link_to 'Float 2', booking_path(option: 'float2') %></li>
+  <li role="presentation" class= "<%= 'active' if current_page?(booking_path(option: "chair")) %>" ><%= link_to 'Chair', booking_path(option: 'chair') %></li>
+  <li role="presentation" class= "<%= 'active' if current_page?(booking_path(option: "yoga")) %>"><%= link_to 'Yoga', booking_path(option: 'yoga') %></li>
 </ul>
 
 <% #Set up table %>
-<% srand(1234) %>
 <table id='calendar' align="center">
 	<tr>
 		<% (@beginning_of_week..@end_of_week).each do |d| %>
@@ -43,6 +42,7 @@
   	<tr>
   		<% (@beginning_of_week..@end_of_week).each do |d| %>
 			<th><%= d.strftime('%B %e, %Y') %></th>
+			<% @cday = d.strftime('%B %e, %Y') %>
 		<% end %>
 	</tr>
 	<tr>
@@ -65,7 +65,7 @@
 			    					</p>
 			    				</div>
 			    				<div class="date-button">
-				    				<a class="btn btn-info" href=<%=pre_new_appointment_path(hour: i)%> role="button">Reserve</a>
+				    				<a class="btn btn-info" href=<%=pre_new_appointment_path(hour: i, month: @date.month, day: @date.day, year: @date.year, cday: @cday, option: @option)%> role="button">Reserve</a>
 									</button>
 								</div>
 			    			</p>

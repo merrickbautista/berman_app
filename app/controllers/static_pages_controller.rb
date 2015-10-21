@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
 
   def booking
   	@date = Date.today
+    @option = params[:option]
   end
 
   def sign_up

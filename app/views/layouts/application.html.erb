@@ -8,16 +8,16 @@
 </head>
 <body>
 
-<div class="navbar navbar-fixed-top navbar-inverse">
+<div class="navbar navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href=<%= root_path %>><strong>BLOOM</strong></a>
+      <a class="navbar-brand" href=<%= root_path %>><%= image_tag('bloom_logo.png', height: '60', width: '120', class: "logo")%></a>
     </div>
     <ul class="nav navbar-nav">
       <li><%= link_to 'HOME', '/' %></li>
       <li><%= link_to 'ABOUT US', about_path %></li>
       <li><%= link_to 'PACKAGES & PRICING', pricing_path %></li>
-      <li><%= link_to 'BOOKING', booking_path %></li>
+      <li><%= link_to 'BOOKING', booking_path(option: "float1") %></li>
       <li><%= link_to 'GALLERY', gallery_path %></li>
       <li><%= link_to 'BENEFITS', benefits_path %></li>
       <li><%= link_to 'CONTACT', contact_path %></li>
@@ -29,10 +29,11 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 </div>
+<div style="margin-bottom: 150px;">
+  <%= yield %>
+</div>
 
-<%= yield %>
-
-<footer class="navbar navbar-inverse" style="margin-bottom:0px; text-align:center;">
+<footer class="navbar navbar-inverse navbar-fixed-bottom" style="margin-bottom:0px; text-align:center; margin-top: 50px;">
   <div class="btn-group-lg" style="margin-top:20px; margin-bottom:20px;">
     <button type="button" class="btn btn-default social-button">
           <i class="icon-fa-facebook"></i> 
