@@ -126,7 +126,7 @@ body {
 #calendar {
 }
 
-td {
+/*td {
 	text-align: center;
 	padding-top: 1px;
 	padding-bottom: 1px;
@@ -135,5 +135,33 @@ td {
 }
 th {
 	text-align: center;
+}*/
+
+//Pricing CSS
+#pricing-table {
+	table-layout: fixed;
+}
+
+.price-block {
+	padding-left: 40px;
+	position: relative;
+}
+
+.price-button {
+	color: #4FC4F1;
+	border: 1px solid #4FC4F1;
+	width: 55%;
+	position: absolute;
+	bottom: 10%;
+	&:hover {
+		background-color: #4FC4F1;
+		border: 1px solid #4FC4F1;
+	}
+
+	&:focus {
+		background-color: #4FC4F1;
+		border: 1px solid #4FC4F1;		
+	}
+
 }
 
