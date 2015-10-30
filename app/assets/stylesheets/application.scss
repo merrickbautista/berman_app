@@ -218,6 +218,11 @@ th {
 .price-block {
 	padding-left: 40px;
 	position: relative;
+	height: 175px;
+}
+
+.price-block .lead {
+	font-size: 1.2em;
 }
 
 .price-button {
