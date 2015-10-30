@@ -1,39 +1,77 @@
+<!--<script>
+$(document).ready(function(){
+	$(window).scroll(function(){
+    	$("#week-selector").css("top", Math.max(0, 50 - $(this).scrollTop()));
+    	alert("Test");
+	});
+}
+</script>-->
+<script>
+	$(window).scroll(function(){
+    	//$("#week-top").css("margin-top",Math.max(20,20-$(this).scrollTop()));
+    	//alert($("#week-top").css("height"));
+    	/*if ($(window).scrollTop() > 5) {
+            $("#week-top").css({
+                position: 'absolute',
+                top: 0
+            });        } 
+        else {
+            $("#week-top").css({
+                position: 'static'
+            });
+        }*/
+	});
+</script>
+<script src="jquery.js"></script>
+<script src="jquery.sticky.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#week-top").sticky({topSpacing:50});
+  });
+</script>
+
 <div class="container" style="text-align: center;">
 	<div class="calendar">
-		<div id="week-selector">
-			<a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
-			<div style="font-size: 0.8em; display: inline-block;">This Week, <%= @date.strftime("%b %Y")%></div>
-			<a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		<div id="week-top">
+			<div id="week-selector">
+				<a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				<div style="font-size: 0.8em; display: inline-block;">This Week, <%= @date.strftime("%b %Y")%></div>
+				<a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			<ul class="weekdays">
+				<% for i in 0..6 %>
+					<li>
+						<h3><small><strong><%= @days[i] %></strong></small></h3>
+						<% if @week[i].today? %>
+							<h4><strong><u><%= @week[i].strftime("%e") %></u></strong></h4>
+							<!--Wrong Date-->
+						<% else %>
+							<h4><strong><%= @week[i].strftime("%e") %></strong></h4>
+						<% end %>
+					</li>
+				<%end%>
+			</ul>
 		</div>
-		<ul class="weekdays">
-			<% for i in 0..6 %>
-				<li>
-					<h3><small><strong><%= @days[i] %></strong></small></h3>
-					<% if @week[i].today? %>
-						<h4><strong><u><%= @week[i].strftime("%e") %></u></strong></h4>
-						<!--Wrong Date-->
-					<% else %>
-						<h4><strong><%= @week[i].strftime("%e") %></strong></h4>
-					<% end %>
-				</li>
-			<%end%>
-		</ul>
-		<ul class="weekdays" id="times">
-			<% for i in 0..6 %>
-				<li id="day-column">
-					<% for j in 0..3 %>
-						<div id="time-slot">
-							<!--Need to fix darker borders-->
-							<h4 style="text-align: left; padding-left: 10%;"><small><%= @times[j] %></small></h4>
-							<br/>
-							<button type="button" class="btn btn-default btn-bloom">Reserve</button>
-						</div>
-					<% end %>
-				</li>
-			<% end %>
-		</ul>
+		<div id="weekday-container">
+			<ul class="weekdays" id="times">
+				<% for i in 0..6 %>
+					<li id="day-column">
+						<% for j in 0..5 %>
+							<div id="time-slot">
+								<!--Need to fix darker borders-->
+								<br/>
+								<h4 style="text-align: left; padding-left: 10%;"><small><%= @times[j] %></small></h4>
+								<br/>
+								<button type="button" class="btn btn-default btn-bloom">Reserve</button>
+							</div>
+						<% end %>
+					</li>
+				<% end %>
+			</ul>
+		</div>
 	</div>
 </div>
+
 
 <!--<h1 style="text-align:left; padding-left: 200px; float:left;">BOOK NOW!</h1>
   <% #Initialize the proper date and week, can be simpler using step %>
