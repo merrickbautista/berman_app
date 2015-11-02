@@ -8,23 +8,23 @@
 </head>
 <body>
 
-<div class="navbar navbar-fixed-top navbar-custom">
+<div class="navbar navbar-fixed-top navbar-custom" style="height: 60px; padding: 0 150px 0 150px;">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href=<%= root_path %>><%= image_tag('bloom_wellness.png', height: '45', width: '100', class: "logo")%></a>
+      <a class="navbar-brand" style="margin-top: 4px;" href=<%= root_path %>><%= image_tag('bloom_wellness.png', height: '45', width: '100', class: "logo")%></a>
       <button type="button" class="navbar-toggle collapsed menu-button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="glyphicon glyphicon-menu-hamburger"></span>
       </button> 
     </div>
-    <ul class="nav navbar-nav navbar-collapse collapse" id="navbar">
-      <li><%= link_to 'HOME', '/',{:style=>'color:#4FC4F1;'} %></li>
-      <li><%= link_to 'ABOUT US', about_path, {:style=>'color:#4FC4F1;'} %></li>
-      <li><%= link_to 'PACKAGES & PRICING', pricing_path, {:style=>'color:#4FC4F1;'} %></li>
-      <li><%= link_to 'BOOKING', booking_path(option: "float1"), {:style=>'color:#4FC4F1;'} %></li>
-      <li><%= link_to 'GALLERY', gallery_path, {:style=>'color:#4FC4F1;'} %></li>
-      <li><%= link_to 'BENEFITS', benefits_path, {:style=>'color:#4FC4F1;'} %></li>
-      <li><%= link_to 'CONTACT', contact_path, {:style=>'color:#4FC4F1;'} %></li>
+    <ul class="nav navbar-nav navbar-collapse collapse" id="navbar" style="float: right;">
+      <li><%= link_to 'HOME', '/',{:style=>'color:#A8A8A8;'} %></li>
+      <li><%= link_to 'ABOUT US', about_path, {:style=>'color:#A8A8A8;'} %></li>
+      <li><%= link_to 'PACKAGES & PRICING', pricing_path, {:style=>'color:#A8A8A8;'} %></li>
+      <li><%= link_to 'BOOKING', booking_path(option: "float1"), {:style=>'color:#A8A8A8;'} %></li>
+      <li><%= link_to 'GALLERY', gallery_path, {:style=>'color:#A8A8A8;'} %></li>
+      <li><%= link_to 'BENEFITS', benefits_path, {:style=>'color:#A8A8A8;'} %></li>
+      <li><%= link_to 'CONTACT', contact_path, {:style=>'color:#A8A8A8;'} %></li>
     </ul>
   </div>
 </div>
